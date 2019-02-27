@@ -1,0 +1,161 @@
+<wa_form name="User Update" id="UserUpdate" submit_text="Update" send_mail="false" use_upload="false">
+	<wa_form_fieldset label="User Update" id="User Update">
+		<wa_fieldset_description>Required *</wa_fieldset_description>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Please enter a value.</wa_field_set_validation>
+							<wa_field_reference src="text_medium.xml" label="Email" defaultvalue="%3C?php%20echo%20$SecurityAssistps4users-%3EgetColumnVal(%22UserEmail%22);%20?%3E" validation="{ required: true, type: 'email', is_unique: true, connection: 'ltu', table: 'ps4_users', keyColumn: 'UserID', keyType: 'none,none,NULL', keyValue: '%22.((isset($_SESSION%5B%22SecurityAssist_UserID%22%5D))?$_SESSION%5B%22SecurityAssist_UserID%22%5D:%220%22)%20%20.%22', filterColumn: 'UserEmail', filterType: '%27,none,%27%27', filterValue: '%22.((isset($_POST%5B%22%7BField.Name%7D%22%5D))?$_POST%5B%22%7BField.Name%7D%22%5D:%22%22)%20%20.%22' }" serverValidation="email|unique" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Password strength requirement not met. @@strengthmessage@@</wa_field_set_validation>
+							<wa_field_reference src="password_medium.xml" label="Password" defaultvalue="%3C?php%20echo%20WA_HashDecryption($SecurityAssistps4users-%3EgetColumnVal(%22UserPassword%22));%20?%3E" validation="{ required: false, isConfirm: false, minChars: 6, maxChars: 500, isRequired: false, is_required: false }" serverValidation="|entrylength" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>A value is required.</wa_field_set_validation>
+							<wa_field_reference src="password_medium.xml" label="Confirm" validation="{ required: false, isConfirm: true, isRequired: false, is_required: false }" serverValidation="confirm" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Please enter a value.</wa_field_set_validation>
+							<wa_field_reference src="text_medium.xml" label="First Name" defaultvalue="%3C?php%20echo%20$SecurityAssistps4users-%3EgetColumnVal(%22UserFirstName%22);%20?%3E" validation="{ required: true, type: 'none', minChars: 6, maxChars: 500 }" serverValidation="required" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Please enter a value.</wa_field_set_validation>
+							<wa_field_reference src="text_medium.xml" label="Last Name" defaultvalue="%3C?php%20echo%20$SecurityAssistps4users-%3EgetColumnVal(%22UserLastName%22);%20?%3E" validation="{ required: true, type: 'none', minChars: 1, maxChars: 50 }" serverValidation="required" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Please enter a value.</wa_field_set_validation>
+							<wa_field_reference src="text_medium.xml" label="Address" defaultvalue="%3C?php%20echo%20$SecurityAssistps4users-%3EgetColumnVal(%22UserAddress%22);%20?%3E" validation="{ required: true, type: 'none' }" serverValidation="required" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Please enter a value.</wa_field_set_validation>
+							<wa_field_reference src="text_medium.xml" label="Address 2" defaultvalue="%3C?php%20echo%20$SecurityAssistps4users-%3EgetColumnVal(%22UserAddress2%22);%20?%3E" validation="{ required: true, type: 'none', minChars: 1, maxChars: 100 }" serverValidation="required" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Please enter a value.</wa_field_set_validation>
+							<wa_field_reference src="text_medium.xml" label="City" defaultvalue="%3C?php%20echo%20$SecurityAssistps4users-%3EgetColumnVal(%22UserCity%22);%20?%3E" validation="{ required: true, type: 'none', minChars: 1, maxChars: 50 }" serverValidation="required" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Please enter a value.</wa_field_set_validation>
+							<wa_field_reference src="text_medium.xml" label="State" defaultvalue="%3C?php%20echo%20$SecurityAssistps4users-%3EgetColumnVal(%22UserState%22);%20?%3E" validation="{ required: true, type: 'none', minChars: 1, maxChars: 90 }" serverValidation="required" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Please enter a value.</wa_field_set_validation>
+							<wa_field_reference src="text_medium.xml" label="Zip" defaultvalue="%3C?php%20echo%20$SecurityAssistps4users-%3EgetColumnVal(%22UserZip%22);%20?%3E" validation="{ required: true, type: 'none', minChars: 1, maxChars: 20 }" serverValidation="required" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Please enter a value.</wa_field_set_validation>
+							<wa_field_reference src="MenuCountryList_medium.xml" label="Country" defaultvalue="%3C?php%20echo%20$SecurityAssistps4users-%3EgetColumnVal(%22UserCountry%22);%20?%3E" validation="{ notInvalidValue: false }" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Please enter a value.</wa_field_set_validation>
+							<wa_field_reference src="text_medium.xml" label="Phone" defaultvalue="%3C?php%20echo%20$SecurityAssistps4users-%3EgetColumnVal(%22UserPhone%22);%20?%3E" validation="{ type: 'none' }" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+		<wa_form_line>
+			<wa_form_group_reference label="" continueLine="false">
+				<wa_field_group name="">
+					<wa_field_line>
+						<wa_field_column>
+							<wa_field_set_validation>Please enter a value.</wa_field_set_validation>
+							<wa_field_reference src="text_medium.xml" label="Fax" defaultvalue="%3C?php%20echo%20$SecurityAssistps4users-%3EgetColumnVal(%22UserFax%22);%20?%3E" validation="{ required: true, type: 'none', minChars: 1, maxChars: 20 }" serverValidation="required" undefinedundefined continueLine="false"></wa_field_reference>
+						</wa_field_column>
+					</wa_field_line>
+				</wa_field_group>
+			</wa_form_group_reference>
+		</wa_form_line>
+	</wa_form_fieldset>
+</wa_form>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="MM_Session_Count" value="4" />
+	<infoitem key="MM_Cookie_Count" value="1" />
+	<infoitem key="MM_Cookie1" value="RememberMe_UserEmail" />
+	<infoitem key="MM_WA_Auth_Count" value="1" />
+	<infoitem key="MM_Session1" value="SecurityAssist_UserID" />
+	<infoitem key="MM_Session2" value="SecurityAssist_UserEmail" />
+	<infoitem key="MM_Session3" value="SecurityAssist_UserFirstName" />
+	<infoitem key="MM_WA_Auth1" value="authenticate" />
+	<infoitem key="MM_Session4" value="SecurityAssist_UserLastName" />
+</info>
